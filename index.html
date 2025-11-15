@@ -3,49 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>B. Gomes Carpentry Services in Jersey</title>
-  
-  <!-- SEO -->
-  <meta name="description" content="B. Gomes Carpentry Services in Jersey. Professional doors, roofing, exterior carpentry and repairs across Jersey. Free quotes via WhatsApp.">
-  <meta name="author" content="B. Gomes Carpentry Services in Jersey">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="B. Gomes Carpentry Services in Jersey">
-  <meta property="og:description" content="Doors, roofing and exterior carpentry by B. Gomes in Jersey. Contact via WhatsApp for a free quote.">
-  <meta property="og:type" content="website">
-  
+  <title>J Gomes LTD – Extensions & General Building in Jersey</title>
+
+  <meta name="description" content="J Gomes LTD is a Jersey-based building company specialising in extensions, open-plan conversions and general building work for homes and small developments.">
+
   <style>
     :root {
-      --gold: #cfa14a;
-      --gold-soft: #f5e4c0;
-      --black: #171717;
-      --dark: #222222;
-      --grey: #666666;
-      --light: #f7f5f2;
-      --white: #ffffff;
-      --accent-wood: #8b5a2b;
-      --max-width: 1100px;
-      --radius: 16px;
-      --shadow: 0 18px 45px rgba(0,0,0,0.16);
+      --jg-blue: #0f3d91;
+      --jg-gold: #f2b23a;
+      --bg: #0b1220;
+      --card-bg: #020617;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.4);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
-      background: var(--light);
-      color: var(--dark);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1d283a 0, #020617 40%, #020617 100%);
+      color: var(--text-main);
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     img {
@@ -53,1448 +44,826 @@
       display: block;
     }
 
-    /* Layout base */
     .page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.4rem;
+    }
+
+    /* HEADER */
+
     header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(23, 23, 23, 0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      color: var(--white);
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(2, 6, 23, 0.92);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.8);
     }
 
-    .nav {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 10px 18px;
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      padding: 0.9rem 0;
+      gap: 1rem;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 0.7rem;
     }
 
-    .brand-logo {
-      width: 40px;
-      height: 40px;
+    .logo-circle {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #f8f2e4, #4b320f);
+      background: radial-gradient(circle at 30% 0, #fef9c3, #f97316);
+      border: 2px solid var(--jg-gold);
       display: flex;
       align-items: center;
       justify-content: center;
+      color: #111827;
+      font-weight: 900;
+      font-size: 1.1rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1rem;
       font-weight: 800;
-      font-size: 18px;
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,0.4);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .brand-text-title {
-      font-weight: 700;
-      font-size: 17px;
-      letter-spacing: 0.04em;
+    .brand-title span {
+      color: var(--jg-gold);
     }
 
-    .brand-text-sub {
-      font-size: 12px;
-      color: #c3c3c3;
+    .brand-sub {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
     }
 
-    .nav-right {
+    .header-right {
       display: flex;
       align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap: 0.7rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
     }
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
+    .badge-small {
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.7);
+      display: inline-flex;
       align-items: center;
-      font-size: 13px;
-      flex-wrap: wrap;
+      gap: 0.35rem;
     }
 
-    .nav-links a {
-      color: #f3f3f3;
-      opacity: 0.85;
-    }
-
-    .nav-links a:hover {
-      opacity: 1;
-    }
-
-    .btn {
+    .dot-online {
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
-      padding: 8px 16px;
-      font-size: 13px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.4);
+    }
+
+    .btn-whatsapp {
+      border-radius: var(--radius-pill);
+      border: none;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      border: none;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      gap: 0.4rem;
+      background: #22c55e;
+      color: #022c22;
+      box-shadow: 0 14px 32px rgba(22, 163, 74, 0.7);
       white-space: nowrap;
     }
 
-    .btn-primary {
-      background: var(--gold);
-      color: var(--black);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 36px rgba(0,0,0,0.3);
-      background: #e0b964;
-    }
-
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.28);
-      color: #f3f3f3;
-    }
-
-    .btn-ghost:hover {
-      background: #2a2a2a;
-    }
-
-    .lang-switch {
-      display: inline-flex;
+    .btn-whatsapp span.icon {
+      width: 18px;
+      height: 18px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.3);
-      overflow: hidden;
-      font-size: 11px;
-    }
-
-    .lang-btn {
-      padding: 4px 10px;
-      cursor: pointer;
-      background: transparent;
-      color: #f3f3f3;
-      border: none;
-    }
-
-    .lang-btn.active {
-      background: #f3f3f3;
-      color: #111;
-      font-weight: 600;
-    }
-
-    main {
-      flex: 1;
-    }
-
-    .section {
-      padding: 48px 18px;
-    }
-
-    .section-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      background: rgba(15, 23, 42, 0.8);
+      color: #bbf7d0;
     }
 
     /* HERO */
+
     .hero {
-      background: radial-gradient(900px 400px at 10% -80%, #ffffff, transparent),
-                  radial-gradient(900px 400px at 110% -60%, #f2dfc4, transparent),
-                  linear-gradient(145deg, #2a221a, #111111);
-      color: var(--white);
-      padding-top: 40px;
-      padding-bottom: 52px;
+      padding: 2.7rem 0 2.4rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: center;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 2.1rem;
+      align-items: stretch;
     }
 
-    .badge {
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.3);
-      background: rgba(0,0,0,0.3);
-      font-size: 11px;
+      gap: 0.45rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 12px;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
     }
 
-    .badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--gold);
+    .eyebrow span.icon {
+      font-size: 0.95rem;
     }
 
     .hero-title {
-      font-size: clamp(26px, 3.4vw + 12px, 40px);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      font-size: clamp(2rem, 2.6vw + 1.3rem, 2.7rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
     }
 
-    .hero-highlight {
-      color: var(--gold-soft);
+    .hero-title span.highlight {
+      color: var(--jg-gold);
     }
 
-    .hero-text {
-      font-size: 14px;
-      color: #e3dfd8;
-      margin-bottom: 20px;
-      max-width: 520px;
+    .hero-sub {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: #e5e7eb;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-list span.bullet {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--jg-gold);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 14px;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.7rem;
+    }
+
+    .btn-primary {
+      border-radius: var(--radius-pill);
+      border: none;
+      padding: 0.65rem 1.4rem;
+      background: linear-gradient(135deg, var(--jg-gold), #f97316);
+      color: #111827;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* HERO CARD */
+
+    .hero-card {
+      border-radius: 24px;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 50%);
+      padding: 1rem;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.9rem;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+
+    .hero-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      margin-bottom: 0.5rem;
+      min-height: 160px;
+      background: linear-gradient(135deg, #1e293b, #020617);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #cbd5f5;
+      padding: 1.1rem;
     }
 
     .hero-meta {
-      font-size: 12px;
-      color: #d3cbbd;
-    }
-
-    /* HERO visual */
-    .hero-panel {
-      background: rgba(0,0,0,0.55);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.1);
-      display: grid;
-      gap: 12px;
-    }
-
-    .hero-panel-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .hero-panel-title {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .hero-tag {
-      font-size: 11px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.4);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #f5e6c9;
-    }
-
-    .hero-panel-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 10px;
-      margin-top: 6px;
-    }
-
-    .wood-block {
-      background: linear-gradient(135deg, #5a3920, #8b5a2b);
-      border-radius: 14px;
-      padding: 10px 12px;
-      color: #fdf4e3;
-      font-size: 13px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .wood-block::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,0.08), transparent);
-      mix-blend-mode: screen;
-      opacity: 0.8;
-    }
-
-    .wood-block-title {
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .wood-block-list {
-      font-size: 11px;
-      list-style: none;
-    }
-
-    .wood-block-list li::before {
-      content: "• ";
-    }
-
-    .hero-mini {
-      background: rgba(17,17,17,0.76);
-      border-radius: 14px;
-      padding: 10px 11px;
-      font-size: 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #f0e6d7;
-    }
-
-    .hero-mini strong {
-      color: var(--gold-soft);
-    }
-
-    .hero-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
+      gap: 0.55rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
     }
 
-    .hero-badge-small {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.14);
-    }
-
-    /* Section titles */
-    .sec-title {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 6px;
-      color: var(--black);
-    }
-
-    .sec-subtitle {
-      font-size: 13px;
-      color: var(--grey);
-      margin-bottom: 18px;
-    }
-
-    /* SERVICES */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 16px 16px 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .card-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #2a221a, #403024);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-soft);
-      font-size: 18px;
-    }
-
-    .card-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--black);
-    }
-
-    .card-text {
-      font-size: 13px;
-      color: var(--grey);
-    }
-
-    .card-list {
-      margin-top: 4px;
-      padding-left: 18px;
-      font-size: 12px;
-      color: #555;
-    }
-
-    /* GALLERY */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .gallery-item {
-      border-radius: 14px;
-      overflow: hidden;
-      position: relative;
-      background: linear-gradient(135deg, #4b3320, #8f6140);
-      min-height: 120px;
-      display: flex;
-      align-items: flex-end;
-      padding: 10px;
-      color: #f9f3ea;
-      font-size: 12px;
-    }
-
-    .gallery-item span {
-      background: rgba(0,0,0,0.45);
-      padding: 4px 8px;
-      border-radius: 999px;
-    }
-
-    /* ABOUT / WHY US */
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .pill {
+    .hero-meta span {
       display: inline-flex;
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: var(--gold-soft);
-      color: var(--black);
-      font-weight: 600;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .hero-meta span::before {
+      content: "•";
+      color: var(--jg-gold);
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 1.4rem 0 2.5rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.3rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
     }
 
-    .list-check {
-      list-style: none;
-      margin-top: 8px;
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
     }
 
-    .list-check li {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 6px;
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 34rem;
     }
 
-    .check-icon {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      border: 1px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      color: var(--gold);
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .highlight-box {
-      background: var(--black);
-      color: #f5e9d8;
-      border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: var(--shadow);
-      font-size: 13px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .highlight-box strong {
-      color: var(--gold-soft);
-    }
-
-    /* CONTACT */
-    .contact-wrapper {
+    .cards {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 18px;
-      align-items: stretch;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
     }
 
-    .contact-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0,0,0,0.04);
-      font-size: 13px;
-      color: #555;
-    }
-
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .chip {
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--light);
-      border: 1px solid rgba(0,0,0,0.08);
-      color: #555;
-    }
-
-    .contact-details {
-      margin-top: 10px;
-      font-size: 13px;
-    }
-
-    .contact-details p {
-      margin-bottom: 4px;
-    }
-
-    .contact-label {
-      font-weight: 600;
-      color: var(--black);
-    }
-
-    .social-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .social-btn {
-      flex: 1 1 120px;
-      justify-content: center;
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 13px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: transform 0.12s ease, box-shadow 0.12s ease;
-      color: #fff;
-    }
-
-    .social-btn--wa { background: #25d366; }
-    .social-btn--fb { background: #1877f2; }
-    .social-btn--ig { background: #f00075; }
-
-    .social-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid rgba(0,0,0,0.08);
-      background: #111111;
-      color: #c0c0c0;
-      padding: 16px 18px;
-      font-size: 11px;
-    }
-
-    .footer-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .footer-inner span:last-child {
-      color: #999;
-    }
-
-    /* CHATBOT FLOATING */
-    .chat-launcher {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      z-index: 40;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .chat-launcher-text {
-      background: var(--black);
-      color: var(--gold-soft);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      box-shadow: var(--shadow);
-      display: none;
-    }
-
-    .chat-launcher-btn {
-      width: 52px;
-      height: 52px;
-      border-radius: 999px;
-      border: none;
-      background: var(--gold);
-      color: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.24);
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
-    }
-
-    .chat-launcher-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 22px 46px rgba(0,0,0,0.3);
-      background: #e1b85a;
-    }
-
-    .chatbox {
-      position: fixed;
-      bottom: 80px;
-      right: 18px;
-      width: 300px;
-      max-height: 430px;
-      background: var(--white);
-      border-radius: 18px;
-      box-shadow: 0 22px 60px rgba(0,0,0,0.35);
-      border: 1px solid rgba(0,0,0,0.08);
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-      z-index: 45;
-    }
-
-    .chatbox-header {
-      padding: 10px 12px;
-      background: var(--black);
-      color: var(--gold-soft);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .chatbox-header h3 {
-      font-size: 14px;
-    }
-
-    .chatbox-header span {
-      font-size: 11px;
-      color: #d5c79e;
-    }
-
-    .chatbox-close {
-      background: transparent;
-      border: none;
-      color: var(--gold-soft);
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .chatbox-body {
-      padding: 10px 12px 12px;
-      font-size: 13px;
-      color: #444;
-      background: #fcfcfd;
-    }
-
-    .chatbot-bubble {
-      background: var(--gold-soft);
-      border-radius: 14px;
-      padding: 8px 10px;
-      margin-bottom: 10px;
-    }
-
-    .chatbox-quick {
-      display: grid;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .chatbox-quick button {
-      border-radius: 999px;
-      border: none;
-      padding: 7px 10px;
-      font-size: 12px;
-      background: var(--light);
-      color: #444;
-      cursor: pointer;
-      text-align: left;
-      transition: background 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
-    }
-
-    .chatbox-quick button:hover {
-      background: #ece2cf;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-    }
-
-    .chatbox-footer {
-      border-top: 1px solid rgba(0,0,0,0.06);
-      padding: 8px 10px;
-      display: flex;
-      gap: 6px;
-      align-items: center;
-      background: #f5f3ef;
-    }
-
-    .chatbox-input {
-      flex: 1;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.12);
-      padding: 6px 10px;
-      font-size: 12px;
-      outline: none;
-    }
-
-    .chatbox-send {
-      border-radius: 999px;
-      border: none;
-      padding: 6px 9px;
-      font-size: 12px;
-      background: var(--black);
-      color: var(--gold-soft);
-      cursor: pointer;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .two-col,
-      .contact-wrapper {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .cards-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .gallery-grid {
+    @media (max-width: 880px) {
+      .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 640px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-right {
-        width: 100%;
-        justify-content: space-between;
-      }
-      .nav-links {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 10px;
-      }
-      .cards-grid,
-      .gallery-grid {
+      .cards {
         grid-template-columns: minmax(0, 1fr);
       }
     }
 
-    @media (min-width: 768px) {
-      .chat-launcher-text {
-        display: block;
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 1rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--jg-gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .card-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-text {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-tag {
+      display: inline-flex;
+      padding: 0.15rem 0.6rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
+      border: 1px solid rgba(250, 204, 21, 0.6);
+      color: #facc15;
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 880px) {
+      .info-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.6rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-muted);
+    }
+
+    .contact-card {
+      border-radius: 22px;
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 60%);
+      padding: 1.3rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.1rem;
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .contact-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--jg-gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--text-main);
+    }
+
+    .contact-list li + li {
+      margin-top: 0.2rem;
+    }
+
+    .contact-list li::before {
+      content: "• ";
+      color: var(--jg-gold);
+    }
+
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .badge-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.76rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 1);
+      padding: 1.1rem 0 1.5rem;
+      margin-top: auto;
+      background: #020617;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner strong {
+      color: var(--text-main);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding-inline: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="nav">
+<div class="page">
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
         <div class="brand">
-          <div class="brand-logo">BG</div>
-          <div>
-            <div class="brand-text-title" data-i18n="brandTitle">B. Gomes Carpentry Services</div>
-            <div class="brand-text-sub" data-i18n="brandSubtitle">Doors · Roofing · Jersey</div>
+          <div class="logo-circle">
+            JG
+          </div>
+          <div class="brand-text">
+            <div class="brand-title">J <span>Gomes</span> LTD</div>
+            <div class="brand-sub">Extensions • Open-plan • General Building</div>
           </div>
         </div>
-        <div class="nav-right">
-          <div class="nav-links">
-            <a href="#services" data-i18n="navServices">Services</a>
-            <a href="#gallery" data-i18n="navGallery">Gallery</a>
-            <a href="#about" data-i18n="navAbout">About</a>
-            <a href="#contact" data-i18n="navContact">Contact</a>
-            <a href="#contact" class="btn btn-ghost" data-i18n="navQuote">Free quote</a>
-            <a href="https://wa.me/447797731419" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="navWhatsapp">
-              WhatsApp
-            </a>
+
+        <div class="header-right">
+          <div class="badge-small">
+            <span class="dot-online"></span>
+            <span>Jersey, Channel Islands</span>
           </div>
-          <div class="lang-switch">
-            <button class="lang-btn active" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="pt">PT</button>
-          </div>
+          <a
+            href="https://wa.me/447797731419?text=Hi%20J%20Gomes%20LTD%2C%20I%27d%20like%20to%20ask%20about%20building%20work%20in%20Jersey."
+            target="_blank"
+            rel="noopener"
+          >
+            <button class="btn-whatsapp" type="button">
+              <span class="icon">💬</span>
+              <span>WhatsApp enquiry</span>
+            </button>
+          </a>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="section hero">
-        <div class="section-inner hero-grid">
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
           <div>
-            <div class="badge">
-              <span class="badge-dot"></span>
-              <span data-i18n="heroBadge">Doors · Roofing · Exterior carpentry</span>
+            <div class="eyebrow">
+              <span class="icon">🏗️</span>
+              <span>Building & extensions across Jersey</span>
             </div>
-            <h1 class="hero-title" data-i18n="heroTitle">
-              Solid <span class="hero-highlight" data-i18n="heroHighlight">doors & roofs</span> to protect your home in Jersey.
+
+            <h1 class="hero-title">
+              High-quality
+              <span class="highlight">extensions, open-plan spaces</span>
+              & general building in Jersey
             </h1>
-            <p class="hero-text" data-i18n="heroText">
-              Installation and repair of doors, roofs and exterior woodwork carried out with care and precision.
-              Local work across Jersey with clear quotes and reliable finish.
+
+            <p class="hero-sub">
+              J Gomes LTD delivers solid building work for homeowners and small
+              developments – from single-storey extensions and open-plan
+              conversions to full refurbishments and general building.
             </p>
+
+            <ul class="hero-list">
+              <li>
+                <span class="bullet">✓</span>
+                House extensions and open-plan kitchen/living spaces
+              </li>
+              <li>
+                <span class="bullet">✓</span>
+                Structural work, steel beams and internal wall removal
+              </li>
+              <li>
+                <span class="bullet">✓</span>
+                Refurbishments, brick/block work and general building
+              </li>
+            </ul>
+
             <div class="hero-actions">
-              <a href="https://wa.me/447797731419" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="heroBtnWhatsapp">
-                Get a WhatsApp quote
+              <a
+                href="https://wa.me/447797731419?text=Hi%20J%20Gomes%20LTD%2C%20I%27d%20like%20to%20discuss%20a%20building%20project%20in%20Jersey."
+                target="_blank"
+                rel="noopener"
+              >
+                <button class="btn-primary" type="button">
+                  Request a WhatsApp callback
+                </button>
               </a>
-              <a href="#gallery" class="btn btn-ghost" data-i18n="heroBtnGallery">
-                View recent jobs
-              </a>
+              <span class="hero-note">
+                Send a short message with your area in Jersey and a few details
+                about your project.
+              </span>
             </div>
-            <div class="hero-meta" data-i18n="heroMeta">
-              Send a quick photo of your door, roof or exterior problem on WhatsApp and get a free, no-obligation estimate.
-            </div>
+
+            <p class="hero-note">
+              We can visit the property, look at your plans and give clear,
+              straightforward advice on what’s possible.
+            </p>
           </div>
 
-          <aside class="hero-panel" aria-label="Carpentry highlights">
-            <div class="hero-panel-top">
-              <div>
-                <div class="hero-panel-title" data-i18n="heroPanelTitle">Trusted doors & roofing work in Jersey</div>
-                <small style="font-size:11px;color:#d7d0c4;" data-i18n="heroPanelSubtitle">Houses · Apartments · Extensions</small>
+          <aside class="hero-card">
+            <div>
+              <div class="hero-label">Specialist areas</div>
+              <div class="hero-card-title">
+                Extensions • Open-plan • General building
               </div>
-              <span class="hero-tag" data-i18n="heroTag">Since 20XX</span>
+              <div class="hero-photo">
+                Add project photos here – for example, before/after shots of
+                extensions, open-plan kitchens or refurbishments.
+              </div>
             </div>
-
-            <div class="hero-panel-grid">
-              <div class="wood-block">
-                <div class="wood-block-title" data-i18n="woodBlockTitle">What we work on</div>
-                <ul class="wood-block-list">
-                  <li data-i18n="woodItem1">Front & internal doors</li>
-                  <li data-i18n="woodItem2">Timber roofs & structures</li>
-                  <li data-i18n="woodItem3">Fascias, soffits & cladding</li>
-                  <li data-i18n="woodItem4">Repairs after leaks or storms</li>
-                </ul>
-              </div>
-
-              <div class="hero-mini">
-                <strong data-i18n="heroMiniTitle">Quick visit · Clear quote</strong><br />
-                <span data-i18n="heroMiniText">
-                  We can visit your property, check doors and roofing, and send a clear quote with options.
-                </span>
-                <div class="hero-badges">
-                  <span class="hero-badge-small" data-i18n="badge1">Fully insured</span>
-                  <span class="hero-badge-small" data-i18n="badge2">Local tradesman</span>
-                  <span class="hero-badge-small" data-i18n="badge3">Clean & tidy work</span>
-                </div>
+            <div>
+              <div class="hero-label">Typical projects</div>
+              <div class="hero-meta">
+                <span>Single and double-storey extensions</span>
+                <span>Open-plan kitchen / living conversions</span>
+                <span>Full refurbishments and re-configurations</span>
               </div>
             </div>
           </aside>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SERVICES -->
-      <section id="services" class="section">
-        <div class="section-inner">
-          <h2 class="sec-title" data-i18n="servicesTitle">Doors, roofing & exterior services</h2>
-          <p class="sec-subtitle" data-i18n="servicesSubtitle">
-            From a single sticking door to full roof timber repairs, we help keep your home safe, dry and secure.
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">What J Gomes LTD can build for you</h2>
+          <p class="section-sub">
+            From adding new space to re-thinking your existing layout, J Gomes LTD
+            works on practical, well-finished building projects across Jersey.
           </p>
-
-          <div class="cards-grid">
-            <article class="card">
-              <div class="card-icon">🚪</div>
-              <h3 class="card-title" data-i18n="service1Title">Door fitting & repairs</h3>
-              <p class="card-text" data-i18n="service1Text">
-                Neat, secure doors that close properly and look right with your home.
-              </p>
-              <ul class="card-list">
-                <li data-i18n="service1Item1">Front & back doors</li>
-                <li data-i18n="service1Item2">Internal doors & frames</li>
-                <li data-i18n="service1Item3">Locks, hinges & adjustments</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="card-icon">🏠</div>
-              <h3 class="card-title" data-i18n="service2Title">Roof timber work</h3>
-              <p class="card-text" data-i18n="service2Text">
-                Structural carpentry for new roofs and repairs to existing structures.
-              </p>
-              <ul class="card-list">
-                <li data-i18n="service2Item1">Timber roof repairs</li>
-                <li data-i18n="service2Item2">Rafters & joists</li>
-                <li data-i18n="service2Item3">Strengthening and framing</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="card-icon">🪵</div>
-              <h3 class="card-title" data-i18n="service3Title">Fascias & soffits</h3>
-              <p class="card-text" data-i18n="service3Text">
-                Clean, well-finished edges that protect your roof and improve kerb appeal.
-              </p>
-              <ul class="card-list">
-                <li data-i18n="service3Item1">Timber fascias & soffits</li>
-                <li data-i18n="service3Item2">Rot repairs & replacements</li>
-                <li data-i18n="service3Item3">Cladding and trims</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="card-icon">🌧️</div>
-              <h3 class="card-title" data-i18n="service4Title">Leak & storm repairs</h3>
-              <p class="card-text" data-i18n="service4Text">
-                Fast response to water damage around doors, frames and roof structures.
-              </p>
-              <ul class="card-list">
-                <li data-i18n="service4Item1">Water-damaged timber</li>
-                <li data-i18n="service4Item2">Emergency boarding & securing</li>
-                <li data-i18n="service4Item3">Follow-up carpentry repairs</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="card-icon">🧰</div>
-              <h3 class="card-title" data-i18n="service5Title">Maintenance & small jobs</h3>
-              <p class="card-text" data-i18n="service5Text">
-                The small problems that make a big difference when fixed properly.
-              </p>
-              <ul class="card-list">
-                <li data-i18n="service5Item1">Doors catching or not closing</li>
-                <li data-i18n="service5Item2">Loose frames & trims</li>
-                <li data-i18n="service5Item3">Exterior timber touch-ups</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="card-icon">🏗️</div>
-              <h3 class="card-title" data-i18n="service6Title">Structural carpentry</h3>
-              <p class="card-text" data-i18n="service6Text">
-                Timber work as part of renovations and extensions.
-              </p>
-              <ul class="card-list">
-                <li data-i18n="service6Item1">Stud walls & partitions</li>
-                <li data-i18n="service6Item2">Ceiling & floor joists</li>
-                <li data-i18n="service6Item3">Timber details on extensions</li>
-              </ul>
-            </article>
-          </div>
         </div>
-      </section>
 
-      <!-- GALLERY -->
-      <section id="gallery" class="section">
-        <div class="section-inner">
-          <h2 class="sec-title" data-i18n="galleryTitle">Recent projects</h2>
-          <p class="sec-subtitle" data-i18n="gallerySubtitle">
-            A few examples of the type of work we do. Real photos can be added here for your projects.
-          </p>
-
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <span data-i18n="galleryItem1">New front door & frame · St Helier</span>
-            </div>
-            <div class="gallery-item">
-              <span data-i18n="galleryItem2">Roof timber repair after leak</span>
-            </div>
-            <div class="gallery-item">
-              <span data-i18n="galleryItem3">Fascias & soffits replacement</span>
-            </div>
-            <div class="gallery-item">
-              <span data-i18n="galleryItem4">Internal doors upgraded</span>
-            </div>
-            <div class="gallery-item">
-              <span data-i18n="galleryItem5">Storm-damaged doorway repaired</span>
-            </div>
-            <div class="gallery-item">
-              <span data-i18n="galleryItem6">Timber cladding refresh</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT / WHY US -->
-      <section id="about" class="section">
-        <div class="section-inner two-col">
-          <div>
-            <div class="pill" data-i18n="whyPill">Why choose B. Gomes Carpentry</div>
-            <h2 class="sec-title" data-i18n="whyTitle">Local, reliable and detail-focused</h2>
-            <p class="sec-subtitle" data-i18n="whySubtitle">
-              We treat every job as if it was for our own home. From the first message to the final clean-up,
-              the goal is simple: solid work, done properly.
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">⬛</div>
+            <h3 class="card-title">House extensions</h3>
+            <p class="card-text">
+              Side, rear or wrap-around extensions to give you the extra rooms,
+              bigger kitchen or open-plan family space you need.
             </p>
-            <ul class="list-check">
-              <li>
-                <span class="check-icon">✓</span>
-                <span data-i18n="whyItem1">Clear quotes with no surprise extras – what we agree is what you pay.</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span data-i18n="whyItem2">Help choosing materials and finishes that match your budget and style.</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span data-i18n="whyItem3">Respect for your home – we protect floors, work clean and tidy up after the job.</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span data-i18n="whyItem4">Flexible scheduling to work around your family or business hours where possible.</span>
-              </li>
+            <span class="card-tag">Add space without moving</span>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🧱</div>
+            <h3 class="card-title">Open-plan conversions</h3>
+            <p class="card-text">
+              Turn separate rooms into one bright, open space. Structural work,
+              steels and finishing managed from start to finish.
+            </p>
+            <span class="card-tag">Kitchens, living rooms & more</span>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🏠</div>
+            <h3 class="card-title">Loft & internal changes</h3>
+            <p class="card-text">
+              Loft conversions, extra bedrooms, en-suites and internal
+              re-configurations to make better use of your existing footprint.
+            </p>
+            <span class="card-tag">Make the most of your home</span>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🛠️</div>
+            <h3 class="card-title">General building</h3>
+            <p class="card-text">
+              Brick and block work, patios, walls, porches and other general
+              building jobs around the home or small developments.
+            </p>
+            <span class="card-tag">Solid, reliable workmanship</span>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🔁</div>
+            <h3 class="card-title">Refurbishments</h3>
+            <p class="card-text">
+              Full refurbishments and modernisations – new layouts, updated
+              finishes and a cleaner, brighter feel throughout.
+            </p>
+            <span class="card-tag">Fresh start for tired spaces</span>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📐</div>
+            <h3 class="card-title">Work with your plans</h3>
+            <p class="card-text">
+              Already have drawings or planning approval? We can work from your
+              plans and coordinate with other trades on site.
+            </p>
+            <span class="card-tag">Straightforward to work with</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY / CONTACT -->
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div>
+            <div class="section-header">
+              <div class="section-kicker">Why J Gomes LTD</div>
+              <h2 class="section-title">Local builder with hands-on experience</h2>
+            </div>
+            <p class="section-sub">
+              J Gomes LTD is run by tradespeople who are on site, not just in
+              the office. That means clear communication, realistic timelines
+              and work that’s done properly, not rushed.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Local Jersey company</span>
+              <span class="pill">Hands-on on site, not just management</span>
+              <span class="pill">Clear and honest conversations</span>
+              <span class="pill">Respect for your home and neighbours</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-header">
+              <div class="section-kicker">How it works</div>
+              <h2 class="section-title">Send a WhatsApp and we’ll take it from there</h2>
+            </div>
+            <p class="section-sub">
+              The easiest way to start is with a quick WhatsApp message –
+              mention what you’d like to do and where you are in Jersey. We can
+              then arrange a visit, look at your ideas and talk through options.
+            </p>
+            <div style="margin-top: 0.8rem;">
+              <a
+                href="https://wa.me/447797731419?text=Hi%20J%20Gomes%20LTD%2C%20I%27d%20like%20to%20talk%20about%20a%20building%20project%20in%20Jersey."
+                target="_blank"
+                rel="noopener"
+              >
+                <button class="btn-primary" type="button" style="width: 100%;">
+                  Open WhatsApp and send a message
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CARD -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <div class="contact-label">Next step</div>
+            <div class="contact-title">Tell us what you’d like to build</div>
+            <p class="contact-text">
+              A short WhatsApp message is enough to start – we’ll come back to
+              you to arrange a visit or ask for any extra details we need.
+            </p>
+            <ul class="contact-list">
+              <li>Your area in Jersey (e.g. St Helier, St Brelade)</li>
+              <li>The type of work – extension, open-plan, refurbishment, etc.</li>
+              <li>Any drawings, photos or ideas you already have</li>
             </ul>
           </div>
-
-          <div class="highlight-box">
-            <strong data-i18n="howTitle">How it works:</strong><br /><br />
-            <span data-i18n="howSteps">
-              1. Send a WhatsApp message with a short description and, if possible, a few photos of the door, roof or area.<br />
-              2. We ask any questions we need and arrange a quick visit if required.<br />
-              3. You receive a clear quote and, once agreed, we book the date for the work.<br /><br />
-              For many small jobs, we can quote directly from photos – making it fast and easy for you to decide.
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section">
-        <div class="section-inner contact-wrapper">
-          <div class="contact-card">
-            <h2 class="sec-title" data-i18n="contactTitle">Request a free quote</h2>
-            <p data-i18n="contactText">
-              The quickest way to get started is by sending a WhatsApp message with what you need help with.
-              Feel free to include photos or measurements if you have them.
+          <div class="contact-right">
+            <div class="badge-soft">
+              <span>⏱</span>
+              <span>Replies as soon as possible around working hours.</span>
+            </div>
+            <a
+              href="https://wa.me/447797731419?text=Hi%20J%20Gomes%20LTD%2C%20I%27d%20like%20to%20arrange%20a%20visit%20to%20discuss%20an%20extension%20or%20building%20work."
+              target="_blank"
+              rel="noopener"
+            >
+              <button class="btn-whatsapp" type="button" style="margin-top: 0.2rem;">
+                <span class="icon">💬</span>
+                <span>Start a WhatsApp chat</span>
+              </button>
+            </a>
+            <p class="contact-text" style="margin-bottom: 0;">
+              We’re happy to look at ideas, rough sketches or architect plans –
+              even if you’re just at the early thinking stage.
             </p>
-            <div class="contact-row">
-              <span class="chip" data-i18n="chip1">Local tradesman</span>
-              <span class="chip" data-i18n="chip2">Jersey, Channel Islands</span>
-              <span class="chip" data-i18n="chip3">Doors · Roofing · Exterior</span>
-            </div>
-            <div class="contact-details">
-              <p><span class="contact-label" data-i18n="contactLabelReply">Typical reply:</span> <span data-i18n="contactReply">Same day or within 24 hours</span></p>
-              <p><span class="contact-label" data-i18n="contactLabelArea">Work area:</span> <span data-i18n="contactArea">Across Jersey</span></p>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <p style="font-weight:600;margin-bottom:8px;" data-i18n="contactOptionsTitle">Contact options</p>
-            <div class="social-buttons">
-              <a href="https://wa.me/447797731419" target="_blank" rel="noopener" class="social-btn social-btn--wa" data-i18n="btnWhatsapp">
-                WhatsApp message
-              </a>
-              <a href="https://www.facebook.com/share/1BUzS4pggg/" target="_blank" rel="noopener" class="social-btn social-btn--fb" data-i18n="btnFacebook">
-                Facebook (message)
-              </a>
-              <a href="https://www.instagram.com/josebernardobatistagomes?igsh=b2oxZjM1YmVmenBu" target="_blank" rel="noopener" class="social-btn social-btn--ig" data-i18n="btnInstagram">
-                Instagram (DM)
-              </a>
-            </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
       <div class="footer-inner">
-        <span>© <span id="year"></span> <span data-i18n="footerName">B. Gomes Carpentry Services – Jersey</span></span>
-        <span data-i18n="footerTagline">Doors · Roofing · Exterior carpentry</span>
-      </div>
-    </footer>
-  </div>
-
-  <!-- CHATBOT -->
-  <div class="chatbox" id="chatbox">
-    <div class="chatbox-header">
-      <div>
-        <h3 data-i18n="chatTitle">Chat with B. Gomes</h3>
-        <span data-i18n="chatSubtitle">Quick questions · WhatsApp</span>
-      </div>
-      <button class="chatbox-close" id="chatbox-close" aria-label="Close chat">×</button>
-    </div>
-    <div class="chatbox-body">
-      <div class="chatbot-bubble" data-i18n="chatBubble">
-        Hi! Choose an option or type your question. We’ll prepare a WhatsApp message for you.
-      </div>
-      <div class="chatbox-quick">
-        <button type="button" onclick="sendQuickQuestion(i18nCurrent('quickDoor'))" data-i18n="quickDoorLabel">
-          Door problem
-        </button>
-        <button type="button" onclick="sendQuickQuestion(i18nCurrent('quickRoof'))" data-i18n="quickRoofLabel">
-          Roof problem
-        </button>
-        <button type="button" onclick="sendQuickQuestion(i18nCurrent('quickFascia'))" data-i18n="quickFasciaLabel">
-          Fascias / soffits
-        </button>
-        <button type="button" onclick="sendQuickQuestion(i18nCurrent('quickVisit'))" data-i18n="quickVisitLabel">
-          Book visit & quote
-        </button>
+        <div>
+          <strong>J Gomes LTD</strong> – extensions, open-plan spaces and general
+          building across Jersey.
+        </div>
+        <div>All enquiries and bookings handled directly via WhatsApp.</div>
       </div>
     </div>
-    <div class="chatbox-footer">
-      <input type="text" id="chatbox-input" class="chatbox-input" placeholder="Write your question..." data-i18n-placeholder="chatPlaceholder" />
-      <button type="button" class="chatbox-send" onclick="sendCustomMessage()" data-i18n="chatSendBtn">WhatsApp</button>
-    </div>
-  </div>
-
-  <div class="chat-launcher">
-    <div class="chat-launcher-text" data-i18n="chatLauncherText">Got questions? Speak on WhatsApp.</div>
-    <button class="chat-launcher-btn" id="chat-launcher-btn" aria-label="Open chat">
-      💬
-    </button>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const WHATSAPP_NUMBER = "447797731419";
-    const chatbox = document.getElementById("chatbox");
-    const chatLauncherBtn = document.getElementById("chat-launcher-btn");
-    const chatCloseBtn = document.getElementById("chatbox-close");
-    const chatInput = document.getElementById("chatbox-input");
-
-    function toggleChatbox() {
-      if (chatbox.style.display === "flex") {
-        chatbox.style.display = "none";
-      } else {
-        chatbox.style.display = "flex";
-      }
-    }
-
-    function openWhatsApp(message) {
-      const text = encodeURIComponent(message);
-      window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
-    }
-
-    function sendQuickQuestion(message) {
-      openWhatsApp(message);
-    }
-
-    function sendCustomMessage() {
-      const value = chatInput.value.trim();
-      if (!value) return;
-      openWhatsApp(value);
-      chatInput.value = "";
-    }
-
-    chatLauncherBtn.addEventListener("click", toggleChatbox);
-    chatCloseBtn.addEventListener("click", toggleChatbox);
-
-    // I18N
-
-    const translations = {
-      en: {
-        brandTitle: "B. Gomes Carpentry Services",
-        brandSubtitle: "Doors · Roofing · Jersey",
-        navServices: "Services",
-        navGallery: "Gallery",
-        navAbout: "About",
-        navContact: "Contact",
-        navQuote: "Free quote",
-        navWhatsapp: "WhatsApp",
-
-        heroBadge: "Doors · Roofing · Exterior carpentry",
-        heroTitle: "Solid <span class=\"hero-highlight\">doors & roofs</span> to protect your home in Jersey.",
-        heroHighlight: "doors & roofs",
-        heroText: "Installation and repair of doors, roofs and exterior woodwork carried out with care and precision. Local work across Jersey with clear quotes and reliable finish.",
-        heroBtnWhatsapp: "Get a WhatsApp quote",
-        heroBtnGallery: "View recent jobs",
-        heroMeta: "Send a quick photo of your door, roof or exterior problem on WhatsApp and get a free, no-obligation estimate.",
-
-        heroPanelTitle: "Trusted doors & roofing work in Jersey",
-        heroPanelSubtitle: "Houses · Apartments · Extensions",
-        heroTag: "Since 20XX",
-        woodBlockTitle: "What we work on",
-        woodItem1: "Front & internal doors",
-        woodItem2: "Timber roofs & structures",
-        woodItem3: "Fascias, soffits & cladding",
-        woodItem4: "Repairs after leaks or storms",
-        heroMiniTitle: "Quick visit · Clear quote",
-        heroMiniText: "We can visit your property, check doors and roofing, and send a clear quote with options.",
-        badge1: "Fully insured",
-        badge2: "Local tradesman",
-        badge3: "Clean & tidy work",
-
-        servicesTitle: "Doors, roofing & exterior services",
-        servicesSubtitle: "From a single sticking door to full roof timber repairs, we help keep your home safe, dry and secure.",
-        service1Title: "Door fitting & repairs",
-        service1Text: "Neat, secure doors that close properly and look right with your home.",
-        service1Item1: "Front & back doors",
-        service1Item2: "Internal doors & frames",
-        service1Item3: "Locks, hinges & adjustments",
-
-        service2Title: "Roof timber work",
-        service2Text: "Structural carpentry for new roofs and repairs to existing structures.",
-        service2Item1: "Timber roof repairs",
-        service2Item2: "Rafters & joists",
-        service2Item3: "Strengthening and framing",
-
-        service3Title: "Fascias & soffits",
-        service3Text: "Clean, well-finished edges that protect your roof and improve kerb appeal.",
-        service3Item1: "Timber fascias & soffits",
-        service3Item2: "Rot repairs & replacements",
-        service3Item3: "Cladding and trims",
-
-        service4Title: "Leak & storm repairs",
-        service4Text: "Fast response to water damage around doors, frames and roof structures.",
-        service4Item1: "Water-damaged timber",
-        service4Item2: "Emergency boarding & securing",
-        service4Item3: "Follow-up carpentry repairs",
-
-        service5Title: "Maintenance & small jobs",
-        service5Text: "The small problems that make a big difference when fixed properly.",
-        service5Item1: "Doors catching or not closing",
-        service5Item2: "Loose frames & trims",
-        service5Item3: "Exterior timber touch-ups",
-
-        service6Title: "Structural carpentry",
-        service6Text: "Timber work as part of renovations and extensions.",
-        service6Item1: "Stud walls & partitions",
-        service6Item2: "Ceiling & floor joists",
-        service6Item3: "Timber details on extensions",
-
-        galleryTitle: "Recent projects",
-        gallerySubtitle: "A few examples of the type of work we do. Real photos can be added here for your projects.",
-        galleryItem1: "New front door & frame · St Helier",
-        galleryItem2: "Roof timber repair after leak",
-        galleryItem3: "Fascias & soffits replacement",
-        galleryItem4: "Internal doors upgraded",
-        galleryItem5: "Storm-damaged doorway repaired",
-        galleryItem6: "Timber cladding refresh",
-
-        whyPill: "Why choose B. Gomes Carpentry",
-        whyTitle: "Local, reliable and detail-focused",
-        whySubtitle: "We treat every job as if it was for our own home. From the first message to the final clean-up, the goal is simple: solid work, done properly.",
-        whyItem1: "Clear quotes with no surprise extras – what we agree is what you pay.",
-        whyItem2: "Help choosing materials and finishes that match your budget and style.",
-        whyItem3: "Respect for your home – we protect floors, work clean and tidy up after the job.",
-        whyItem4: "Flexible scheduling to work around your family or business hours where possible.",
-        howTitle: "How it works:",
-        howSteps: "1. Send a WhatsApp message with a short description and, if possible, a few photos of the door, roof or area.<br />2. We ask any questions we need and arrange a quick visit if required.<br />3. You receive a clear quote and, once agreed, we book the date for the work.<br /><br />For many small jobs, we can quote directly from photos – making it fast and easy for you to decide.",
-
-        contactTitle: "Request a free quote",
-        contactText: "The quickest way to get started is by sending a WhatsApp message with what you need help with. Feel free to include photos or measurements if you have them.",
-        chip1: "Local tradesman",
-        chip2: "Jersey, Channel Islands",
-        chip3: "Doors · Roofing · Exterior",
-        contactLabelReply: "Typical reply:",
-        contactReply: "Same day or within 24 hours",
-        contactLabelArea: "Work area:",
-        contactArea: "Across Jersey",
-        contactOptionsTitle: "Contact options",
-        btnWhatsapp: "WhatsApp message",
-        btnFacebook: "Facebook (message)",
-        btnInstagram: "Instagram (DM)",
-
-        footerName: "B. Gomes Carpentry Services – Jersey",
-        footerTagline: "Doors · Roofing · Exterior carpentry",
-
-        chatTitle: "Chat with B. Gomes",
-        chatSubtitle: "Quick questions · WhatsApp",
-        chatBubble: "Hi! Choose an option or type your question. We’ll prepare a WhatsApp message for you.",
-        quickDoorLabel: "Door problem",
-        quickRoofLabel: "Roof problem",
-        quickFasciaLabel: "Fascias / soffits",
-        quickVisitLabel: "Book visit & quote",
-        quickDoor: "Hi, I need help with a door that is not closing properly.",
-        quickRoof: "Hi, I have a problem with the roof and need a quote.",
-        quickFascia: "Hi, I need to change fascias/soffits on my house.",
-        quickVisit: "Hi, I’d like to book a visit to check doors/roof and get a quote.",
-        chatPlaceholder: "Write your question...",
-        chatSendBtn: "WhatsApp",
-        chatLauncherText: "Got questions? Speak on WhatsApp."
-      },
-      pt: {
-        brandTitle: "B. Gomes Carpentry Services",
-        brandSubtitle: "Portas · Telhados · Jersey",
-        navServices: "Serviços",
-        navGallery: "Trabalhos",
-        navAbout: "Sobre",
-        navContact: "Contacto",
-        navQuote: "Orçamento grátis",
-        navWhatsapp: "WhatsApp",
-
-        heroBadge: "Portas · Telhados · Carpintaria exterior",
-        heroTitle: "Portas e telhados <span class=\"hero-highlight\">sólidos e seguros</span> para a sua casa em Jersey.",
-        heroHighlight: "sólidos e seguros",
-        heroText: "Instalação e reparação de portas, telhados e madeiras exteriores feitas com cuidado e atenção ao detalhe. Trabalho local em Jersey, com orçamentos claros e acabamentos fiáveis.",
-        heroBtnWhatsapp: "Pedir orçamento por WhatsApp",
-        heroBtnGallery: "Ver trabalhos recentes",
-        heroMeta: "Envie uma foto rápida da porta, telhado ou problema exterior por WhatsApp e receba um orçamento sem compromisso.",
-
-        heroPanelTitle: "Trabalhos de portas e telhados em Jersey",
-        heroPanelSubtitle: "Moradias · Apartamentos · Ampliações",
-        heroTag: "Desde 20XX",
-        woodBlockTitle: "Em que trabalhamos",
-        woodItem1: "Portas de entrada e interiores",
-        woodItem2: "Estruturas de telhado em madeira",
-        woodItem3: "Fascias, soffits e revestimentos",
-        woodItem4: "Reparações após infiltrações ou tempestades",
-        heroMiniTitle: "Visita rápida · Orçamento claro",
-        heroMiniText: "Podemos visitar a sua casa, ver portas e telhado e enviar um orçamento claro com opções.",
-        badge1: "Totalmente assegurado",
-        badge2: "Profissional local",
-        badge3: "Trabalho limpo e organizado",
-
-        servicesTitle: "Serviços de portas, telhados e exterior",
-        servicesSubtitle: "Desde uma porta que não fecha bem até reparações completas de estrutura de telhado, ajudamos a manter a sua casa segura e seca.",
-        service1Title: "Instalação e reparação de portas",
-        service1Text: "Portas seguras, bem alinhadas e com bom aspeto na sua casa.",
-        service1Item1: "Portas de entrada e de trás",
-        service1Item2: "Portas interiores e aros",
-        service1Item3: "Fechaduras, dobradiças e afinações",
-
-        service2Title: "Estrutura de telhado em madeira",
-        service2Text: "Carpintaria estrutural para telhados novos e reparações em estruturas existentes.",
-        service2Item1: "Reparação de vigas de telhado",
-        service2Item2: "Vigas e barrotes",
-        service2Item3: "Reforços e armações",
-
-        service3Title: "Fascias e soffits",
-        service3Text: "Acabamentos limpos que protegem o telhado e melhoram o exterior da casa.",
-        service3Item1: "Fascias e soffits em madeira",
-        service3Item2: "Reparação de apodrecimento",
-        service3Item3: "Revestimentos e remates",
-
-        service4Title: "Reparações após infiltrações",
-        service4Text: "Resposta rápida a danos de água em portas, aros e estrutura de telhado.",
-        service4Item1: "Madeira danificada por água",
-        service4Item2: "Fecho e proteção de emergência",
-        service4Item3: "Reparações completas de carpintaria",
-
-        service5Title: "Manutenção e pequenos arranjos",
-        service5Text: "Pequenos problemas que fazem grande diferença quando ficam bem resolvidos.",
-        service5Item1: "Portas a prender ou que não fecham",
-        service5Item2: "Aros e remates soltos",
-        service5Item3: "Pequenos acertos em madeira exterior",
-
-        service6Title: "Carpintaria estrutural",
-        service6Text: "Trabalhos de madeira em remodelações e ampliações.",
-        service6Item1: "Paredes interiores em estrutura",
-        service6Item2: "Barrotes de teto e chão",
-        service6Item3: "Pormenores em madeira em ampliações",
-
-        galleryTitle: "Trabalhos recentes",
-        gallerySubtitle: "Alguns exemplos do tipo de trabalho que fazemos. Podemos adicionar aqui fotos reais das suas obras.",
-        galleryItem1: "Porta de entrada e aro novos · St Helier",
-        galleryItem2: "Reparação de madeira em telhado após infiltração",
-        galleryItem3: "Substituição de fascias e soffits",
-        galleryItem4: "Atualização de portas interiores",
-        galleryItem5: "Reparação de porta danificada pela tempestade",
-        galleryItem6: "Renovação de revestimento em madeira",
-
-        whyPill: "Porquê escolher a B. Gomes Carpentry",
-        whyTitle: "Local, fiável e focado no detalhe",
-        whySubtitle: "Tratamos cada trabalho como se fosse na nossa própria casa. Desde a primeira mensagem até à limpeza final, o objetivo é simples: trabalho sólido, bem feito.",
-        whyItem1: "Orçamentos claros, sem surpresas – o que combinamos é o que paga.",
-        whyItem2: "Apoio na escolha de materiais e acabamentos de acordo com o seu orçamento e estilo.",
-        whyItem3: "Respeito pela sua casa – protegemos pavimentos, trabalhamos limpo e arrumamos no fim.",
-        whyItem4: "Horários flexíveis sempre que possível, para encaixar na sua família ou negócio.",
-        howTitle: "Como funciona:",
-        howSteps: "1. Envie uma mensagem por WhatsApp com uma breve descrição e, se possível, algumas fotos da porta, telhado ou zona.<br />2. Fazemos as perguntas necessárias e marcamos uma visita rápida, se for preciso.<br />3. Recebe um orçamento claro e, depois de concordar, marcamos a data para o trabalho.<br /><br />Em muitos trabalhos pequenos conseguimos orçamentar só com fotos – rápido e simples para si.",
-
-        contactTitle: "Pedir orçamento grátis",
-        contactText: "A forma mais rápida de começar é enviar uma mensagem por WhatsApp a explicar o que precisa. Se tiver, pode também enviar fotos ou medidas.",
-        chip1: "Profissional local",
-        chip2: "Jersey, Channel Islands",
-        chip3: "Portas · Telhados · Exterior",
-        contactLabelReply: "Tempo médio de resposta:",
-        contactReply: "No próprio dia ou em 24 horas",
-        contactLabelArea: "Zona de trabalho:",
-        contactArea: "Toda a ilha de Jersey",
-        contactOptionsTitle: "Opções de contacto",
-        btnWhatsapp: "Mensagem por WhatsApp",
-        btnFacebook: "Facebook (mensagem)",
-        btnInstagram: "Instagram (mensagem)",
-
-        footerName: "B. Gomes Carpentry Services – Jersey",
-        footerTagline: "Portas · Telhados · Carpintaria exterior",
-
-        chatTitle: "Chat com a B. Gomes",
-        chatSubtitle: "Dúvidas rápidas · WhatsApp",
-        chatBubble: "Olá! Escolha uma opção ou escreva a sua pergunta. Vamos preparar uma mensagem para enviar por WhatsApp.",
-        quickDoorLabel: "Problema com porta",
-        quickRoofLabel: "Problema no telhado",
-        quickFasciaLabel: "Fascias / soffits",
-        quickVisitLabel: "Marcar visita e orçamento",
-        quickDoor: "Olá, preciso de ajuda com uma porta que não fecha bem.",
-        quickRoof: "Olá, tenho um problema no telhado e preciso de um orçamento.",
-        quickFascia: "Olá, preciso de trocar as fascias/soffits da minha casa.",
-        quickVisit: "Olá, gostaria de marcar uma visita para ver portas/telhado e ter um orçamento.",
-        chatPlaceholder: "Escreva a sua pergunta...",
-        chatSendBtn: "WhatsApp",
-        chatLauncherText: "Tem dúvidas? Fale por WhatsApp."
-      }
-    };
-
-    let currentLang = "en";
-
-    function i18nCurrent(key) {
-      return translations[currentLang][key] || translations.en[key] || "";
-    }
-
-    function applyTranslations(lang) {
-      currentLang = lang;
-      const dict = translations[lang];
-
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (!dict[key]) return;
-
-        if (key === "heroTitle") {
-          el.innerHTML = dict[key];
-        } else if (key === "howSteps") {
-          el.innerHTML = dict[key];
-        } else {
-          el.textContent = dict[key];
-        }
-      });
-
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-        const key = el.getAttribute("data-i18n-placeholder");
-        if (dict[key]) el.placeholder = dict[key];
-      });
-
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
-      });
-    }
-
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const lang = btn.getAttribute("data-lang");
-        applyTranslations(lang);
-      });
-    });
-
-    // default EN
-    applyTranslations("en");
-  </script>
+  </footer>
+</div>
 </body>
-        </html>
+</html>
